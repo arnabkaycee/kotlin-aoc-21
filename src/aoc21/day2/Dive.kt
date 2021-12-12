@@ -30,12 +30,8 @@ fun determineFinalPositionWithAim(): Int {
     var depth = 0
     getCommands().forEach { (command, magnitude) ->
         when (command) {
-            "up" -> {
-                aim -= magnitude
-            }
-            "down" -> {
-                aim += magnitude
-            }
+            "up" -> aim -= magnitude
+            "down" -> aim += magnitude
             "forward" -> {
                 horizontalPosition += magnitude
                 depth += aim * magnitude
